@@ -1,0 +1,23 @@
+from old.api_final.api.base_api import BaseAPI
+
+
+class DepartmentsAPI(BaseAPI):
+    def __init__(self, base_url):
+        super().__init__(base_url)
+        self.endpoint = "departments"
+
+    def create(self, title, headers=None):
+        data = {"title": title}
+        return self.post(self.endpoint, data=data, headers=headers)
+
+    def create_invalid(self, data, headers=None):
+        return self.post(self.endpoint, data=data, headers=headers)
+
+    def get_one(self, department_id, headers=None):
+        return self.get(f"{self.endpoint}/{department_id}", headers=headers)
+
+    def get_all(self, headers=None):
+        return self.get(self.endpoint, headers=headers)
+
+    def update(self, department_id, headers=None, **kwargs):
+        return self.put(f"{self.endpoint}/{department_id}", data=kwargs, headers=headers)
