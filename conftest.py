@@ -2,8 +2,8 @@ import pytest
 import os
 from dotenv import load_dotenv
 from config import BASE_URL
-from old.api_final.pages.project_api import ProjectAPI
-from old.api_final.pages.departments_api import DepartmentsAPI
+from api.project_api import ProjectAPI
+from api.departments_api import DepartmentsAPI
 
 
 load_dotenv()

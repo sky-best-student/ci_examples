@@ -1,0 +1,12 @@
+python-dotenv
+requests
+SQLAlchemy
+psycopg2-binary
+pytest
+selenium
+allure-pytest
+allure-python-commons
+faker
+flake8
+black
+pydantic
