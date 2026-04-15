@@ -1,7 +1,7 @@
 def test_project_create_no_title(auth_headers, project_api):
     response = project_api.create_invalid({"title":""},
                                           headers=auth_headers)
-    assert response.status_code == 401
+    assert response.status_code == 400
     assert response.json()["error"] == "Bad Request"
 
 
